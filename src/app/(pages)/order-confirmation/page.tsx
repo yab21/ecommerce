@@ -10,7 +10,7 @@ import classes from './index.module.scss'
 export default async function OrderConfirmation() {
   return (
     <Gutter className={classes.confirmationPage}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Chargement...</div>}>
         <OrderConfirmationPage />
       </Suspense>
     </Gutter>
@@ -18,10 +18,10 @@ export default async function OrderConfirmation() {
 }
 
 export const metadata: Metadata = {
-  title: 'Order Confirmation',
-  description: 'Your order has been confirmed.',
+  title: 'Confirmation de la commande',
+  description: 'Votre commande a été confirmée.',
   openGraph: mergeOpenGraph({
-    title: 'Order Confirmation',
+    title: 'Confirmation de la commande',
     url: '/order-confirmation',
   }),
 }

@@ -65,7 +65,7 @@ export const CheckoutForm: React.FC<{}> = () => {
               }),
             })
 
-            if (!orderReq.ok) throw new Error(orderReq.statusText || 'Something went wrong.')
+            if (!orderReq.ok) throw new Error(orderReq.statusText || 'Quelque chose a mal tourné.')
 
             const {
               error: errorFromRes,
@@ -87,8 +87,8 @@ export const CheckoutForm: React.FC<{}> = () => {
           }
         }
       } catch (err) {
-        const msg = err instanceof Error ? err.message : 'Something went wrong.'
-        setError(`Error while submitting payment: ${msg}`)
+        const msg = err instanceof Error ? err.message : 'Quelque chose a mal tourné.'
+        setError(`Erreur lors de la soumission du paiement : ${msg}`)
         setIsLoading(false)
       }
     },
@@ -100,9 +100,9 @@ export const CheckoutForm: React.FC<{}> = () => {
       {error && <Message error={error} />}
       <PaymentElement />
       <div className={classes.actions}>
-        <Button label="Back to cart" href="/cart" appearance="secondary" />
+        <Button label="Retour au panier" href="/cart" appearance="secondary" />
         <Button
-          label={isLoading ? 'Loading...' : 'Checkout'}
+          label={isLoading ? 'Chargement...' : 'Sortie de caisse'}
           type="submit"
           appearance="primary"
           disabled={!stripe || isLoading}
