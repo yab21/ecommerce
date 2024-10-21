@@ -128,7 +128,7 @@ export default buildConfig({
       stripeWebhooksEndpointSecret: process.env.STRIPE_WEBHOOKS_SIGNING_SECRET,
       rest: false,
       webhooks: {
-        'product.created': productUpdated,
+        'product.created': productUpdated, 
         'product.updated': productUpdated,
         'price.updated': priceUpdated,
       },
