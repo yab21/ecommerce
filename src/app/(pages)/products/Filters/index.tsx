@@ -28,7 +28,7 @@ const Filters = ({ categories }: { categories: Category[] }) => {
   return (
     <div className={classes.filters}>
       <div>
-        <h6 className={classes.title}>Catégories de produits</h6>
+        <h6 className={classes.title}>Catégories d'articles</h6>
         <div className={classes.categories}>
           {categories.map(category => {
             const isSelected = categoryFilters.includes(category.id)
@@ -48,14 +48,15 @@ const Filters = ({ categories }: { categories: Category[] }) => {
         <h6 className={classes.title}>Trier par</h6>
         <div className={classes.categories}>
           <RadioButton
-            label="Latest"
+            label="Les plus récents"
             value="-createdAt"
             isSelected={sort === '-createdAt'}
             onRadioChange={handleSort}
             groupName="sort"
           />
           <RadioButton
-            label="Oldest"
+            label="Les plus anciens"
+            // label="Oldest"
             value="createdAt"
             isSelected={sort === 'createdAt'}
             onRadioChange={handleSort}

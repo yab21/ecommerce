@@ -79,8 +79,8 @@ const CreateAccountForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
       <p>
-        {`C'est ici que les nouveaux clients peuvent s'inscrire et créer un nouveau compte. Pour gérer tous les utilisateurs, `}
-        <Link href="/admin/collections/users">se connecter au tableau de bord administratif</Link>
+        {`C'est ici que les nouveaux clients peuvent s'inscrire et créer un nouveau compte. `}
+        {/* <Link href="/admin/collections/users">se connecter au tableau de bord administratif</Link> */}
         {'.'}
       </p>
       <Message error={error} className={classes.message} />
